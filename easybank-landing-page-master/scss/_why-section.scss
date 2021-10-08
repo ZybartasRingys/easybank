@@ -1,0 +1,59 @@
+@import './variables';
+
+.why {
+  width: 100%;
+  height: 100%;
+  min-height: 636px;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $LightGrayishBlue;
+
+  .why-header {
+    width: 45%;
+    margin-left: 150px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+    h1 {
+      color: $DarkBlue;
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $GrayishBlue;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.cards {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  .card {
+    img {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: $DarkBlue;
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: $GrayishBlue;
+      font-weight: 400;
+    }
+  }
+}

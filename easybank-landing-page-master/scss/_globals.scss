@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  text-align: center;
+  background-color: $DarkBlue;
+}
+
+// request buttons
+
+.request {
+  width: 163px;
+  height: 44px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  background: #31d45d;
+  background: -webkit-linear-gradient(top left, #31d45d, #2bb7da);
+  background: -moz-linear-gradient(top left, #31d45d, #2bb7da);
+  background: linear-gradient(to bottom right, #31d45d, #2bb7da);
+  cursor: pointer;
+}
