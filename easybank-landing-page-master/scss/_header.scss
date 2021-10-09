@@ -1,9 +1,9 @@
-@import './variables';
+@import "./variables";
 
 .header {
   width: 100%;
   height: 100%;
-  min-height: 736px;
+  min-height: 620px;
   background-color: $VeryLightGray;
 }
 
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   background-color: $White;
+  position: relative;
 
   .logo {
     position: absolute;
@@ -41,9 +42,32 @@
     }
 
     .link:hover {
-      text-decoration: underline;
+      text-decoration-line: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 15px;
       text-decoration-color: $LimeGreen;
+
       cursor: pointer;
+    }
+  }
+
+  .toggle-button {
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+    .bar {
+      width: 100%;
+      height: 2px;
+      background-color: $DarkBlue;
+      border-radius: 10px;
+      opacity: 0.5;
     }
   }
 
@@ -67,7 +91,7 @@
   .header-text {
     width: 60%;
     height: 100%;
-    min-height: 640px;
+    max-height: 640px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -89,16 +113,106 @@
   }
 
   .header-picture {
-    border: 1px solid black;
     width: 100%;
     height: 100%;
-    max-height: 656px;
+    max-height: 500px;
     background-image: url(../images/bg-intro-desktop.svg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+    background-size: 150%;
 
     .mockups {
       width: 100%;
+      height: 155%;
+      margin-top: -110px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 100%;
+
+    .logo {
+      left: 30px;
+    }
+
+    .toggle-button {
+      display: flex;
+    }
+
+    .links {
+      display: none;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  .mobile-links {
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 327px;
+    min-height: 265px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 90px;
+    left: 30px;
+
+    background-color: $White;
+
+    li {
+      list-style: none;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    a {
+      color: $DarkBlue;
+      text-decoration: none;
+    }
+  }
+
+  .mobile-links.active {
+    display: block !important;
+  }
+
+  .header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .header-text {
+      width: 100%;
       height: 100%;
+      max-width: 327px;
+      min-height: 261px !important;
+      margin-top: 50px;
+      margin-bottom: 90px;
+      text-align: center;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      button {
+        margin-left: 80px;
+      }
+    }
+
+    .header-picture {
+      background-image: url(../images/bg-intro-mobile.svg) !important;
+      background-size: cover;
+      background-position: 0 -50px;
+
+      .mockups {
+        width: 100%;
+        height: 100%;
+        margin-top: -135px;
+      }
     }
   }
 }

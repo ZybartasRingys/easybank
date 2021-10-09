@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .why {
   width: 100%;
@@ -12,7 +12,7 @@
 
   .why-header {
     width: 45%;
-    margin-left: 150px;
+    margin-left: 140px;
     margin-top: 70px;
     margin-bottom: 30px;
 
@@ -32,7 +32,7 @@
 }
 
 .cards {
-  width: 85%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   display: grid;
@@ -55,5 +55,39 @@
       color: $GrayishBlue;
       font-weight: 400;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .why {
+    width: 100%;
+    max-width: 600px;
+    @include displayColumn;
+
+    .why-header {
+      width: 100%;
+      margin: 30px auto;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    @include displayColumn;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .cards {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
